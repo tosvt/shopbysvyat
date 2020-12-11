@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Каталог товаров | Магазин Сладостей от Свята</title>
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+	<script src="js/catalog.js" async></script>
+	<link rel="shortcut icon" href="favicon.ico"/>
+</head>
+<body>
+	<div id="top">
+		<div id="searchinput">
+			<form action="">
+				<input type="text" name="search" placeholder="Введите Ваш вкусный товар:">
+			</form>
+		</div>
+		<header>
+			<div class="mobbtn">
+				<div id="menu-toggle" class="menu-icon btnm">
+					<i class="fas fa-bars"></i>
+				</div>
+			</div>
+			<div class="logo">
+				<a href="index.html"><img src="img/mylogo.png" alt=""></a>
+			</div>
+			<!-- MOBILE NAV -->
+			
+			<div class="menu">
+
+				<div class="menu-btn btnm"><i class="fas fa-times"></i></div>
+				<div class="menu-list">
+					<div class="mobile-nav-title">Навигация</div>
+					<ul class="mobile-nav acc_desktop" data-accordion="open">
+						<li class="mobile-nav__item"><a href="index.html" class="nav__link">Главная</a></li>
+						<li class="mobile-nav__item"><a href="catalog.html" class="nav__link">Каталог товаров</a></li>
+						<li class="mobile-nav__item"><a href="order.html" class="nav__link">Заказать</a></li>
+						<li class="mobile-nav__item"><a href="delivery.html" class="nav__link">Доставка</a></li>
+						<li class="mobile-nav__item"><a href="about.html" class="nav__link">О нас</a></li>
+						<li class="mobile-nav__item"><a href="contacts.html" class="nav__link">Контакты</a></li>
+						
+					</ul>
+					
+					<div style="height: 100px;"></div>
+				</div>
+			</div>
+			<div class="topcenter">
+				<nav class="desk">
+					<div class="deskmenu">
+
+						<ul>
+							<li><a href="index.html">Главная</a></li>
+							<li><a href="catalog.html">Каталог товаров</a></li>
+							<li><a href="order.html">Заказать</a></li>
+							<li><a href="delivery.html">Доставка</a></li>
+							<li><a href="about.html">О нас</a></li>
+							<li><a href="contacts.html">Контакты</a></li>
+						</ul>
+					</div>
+				</nav>
+			</div>
+			<div class="topleftm">
+				<div class="search"><i class="fas fa-search" id="searchbtn"></i></div>
+				<div class="cart"><i class="fas fa-shopping-cart"></i></div>
+			</div>
+			
+		</header>
+
+		<section>
+			<div id="content">
+				<div class="catalogheader"><h1>Каталог товаров</h1>
+					<h4 class="allproducts">Все товары</h4>
+				</div>
+				<div class="newproducts">
+					<div class="shop-items">
+						<div class="shop-item">
+							<img class="shop-item-image" src="img/products/1.jpg">
+							<span class="shop-item-title">Фирменные Пончики </span>
+							<div class="shop-item-details">
+								<span class="shop-item-price">160 руб</span>
+								<button class="shop-item-button" type="button">Добавить в корзину</button>
+							</div>
+						</div>
+						<div class="shop-item">
+							<img class="shop-item-image" src="img/products/2.jpeg">
+							<span class="shop-item-title">Новогодний набор</span>
+							<div class="shop-item-details">
+								<span class="shop-item-price">1200 руб</span>
+								<button class="btn btn-primary shop-item-button"type="button" onclick="changeCartColor()">Добавить в корзину</button>
+							</div>
+						</div>
+						<div class="shop-item">
+							<img class="shop-item-image" src="img/products/3.jpg">
+							<span class="shop-item-title">Коробочка сладостей</span>
+							<div class="shop-item-details">
+								<span class="shop-item-price">1100 руб</span>
+								<button class="btn btn-primary shop-item-button" type="button">Добавить в корзину</button>
+							</div>
+						</div>
+						<div class="shop-item">
+							<img class="shop-item-image" src="img/products/4.jpg">
+							<span class="shop-item-title">Фирменный тортик</span>
+							<div class="shop-item-details">
+								<span class="shop-item-price">1200 руб</span>
+								<button class="btn btn-primary shop-item-button" type="button">Добавить в корзину</button>
+							</div>
+						</div>
+					</div>
+
+					<!--            END PRODUCT LIST    -->
+				</div>
+			</div>
+		</section>
+		<footer>© 2020. Все права защищены. <br> Дизайн и разработка сайта - студент РТУ МИРЭА, группы ИКБО-02-19, Золотухин Святослав Александрович</footer>
+	</div>
+	
+	<!-- Cart Popup-->
+	
+	<div id="popup" class="popup_cart">
+		<div class="popup_body">
+			<div class="popup_content">
+				<a class="popup_close">X</a>
+				<div class="popup_title">Ваша корзина</div>
+				<div class="popup_text">
+					<div class="cart-row">
+						<span class="cart-action cart-header cart-column">  </span>
+						<span class="cart-item cart-header cart-column">Товар</span>
+						<span class="cart-price cart-header cart-column">Цена</span>
+						<span class="cart-quantity cart-header cart-column">Кол-во</span>
+					</div>
+					<div class="cart-items">
+					</div>
+					<div class="cart-total">
+						<strong class="cart-total-title">Итого:</strong>
+						<span class="cart-total-price">0 руб</span>
+					</div>
+					<button class="btn-purchase" type="button">Оформить заказ!</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<!-- Cart -->
+	<script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+	<script src="js/main.js"></script>
+	
+</body>
+</html>
